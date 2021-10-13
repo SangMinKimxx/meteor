@@ -2,7 +2,7 @@ version: 0.2
 phases:
     install:
         runtime-versions:
-            nodejs:14
+            nodejs: 14
     build:
         commands:
             - aws s3 sync ./  s3://meteor-website/  --delete  --region ap-northeast-2
