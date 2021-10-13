@@ -6,7 +6,7 @@ phases:
             nodejs: 14
         commands:
             # yarn을 사용
-            - "npm install yarn -g"
+            - npm install yarn -g
     pre_build:
         commands:
             # 기존 배포 빌드 백업
