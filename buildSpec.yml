@@ -21,12 +21,7 @@ phases:
     build:
         commands:
             - npm run build
-    post_build:
-        commands:
-            # s3에 배포하기 위한 수행내용을 위한 buildspec_deploy.yml을 아티팩트에 포함
-            - cp buildspec_deploy.yml build/
-            - cd build
-            - ls
+
 #아티펙트 디렉토리 지정. react 기본으로 빌드되면 build 디렉토리로 빌드됨            
 artifacts:
     files:
