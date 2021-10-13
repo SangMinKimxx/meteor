@@ -6,7 +6,7 @@ phases:
             nodejs: 14
         commands:
             # yarn을 사용
-            - npm install yarn -g
+            - npm install
     pre_build:
         commands:
             # 기존 배포 빌드 백업
@@ -16,10 +16,9 @@ phases:
             - echo -e "\nSTAGE="$build_stage"" >> .env
             - echo -e "\nGENERATE_SOURCEMAP=false" >> .env
             - cat .env
-            - yarn
     build:
         commands:
-            - yarn build
+            - npm run build
     post_build:
         commands:
             # s3에 배포하기 위한 수행내용을 위한 buildspec_deploy.yml을 아티팩트에 포함
