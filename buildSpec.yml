@@ -13,7 +13,9 @@ phases:
             - "echo Copying Old File..."
             - aws s3 sync s3://meteor-backup-bucket/  s3://meteor-backup-bucket/  --delete  --source-region ap-northeast-2 --region ap-northeast-2
             # 환경파일 .env 파일 생성
-
+            - echo -e "\nSTAGE="$build_stage"" >> .env
+            - echo -e "\nGENERATE_SOURCEMAP=false" >> .env
+            - cat .env
             - yarn
     build:
         commands:
