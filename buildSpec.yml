@@ -25,7 +25,7 @@ phases:
     post_build:
         commands:
             # s3에 배포하기 위한 수행내용을 위한 buildspec_deploy.yml을 아티팩트에 포함
-            - cp buildspec_deploy.yml build/
+            - cp buildSpec_deploy.yml build/
             - cd build
             - ls
 
