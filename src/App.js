@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       hellow world
-      success!~!
+      success
     </div>
   );
 }
